@@ -1,0 +1,7 @@
+.netlify/
+node_modules/
+.DS_Store
+*.log
+assets/gallery-vid-2.mp4
+assets/gallery-vid-3.mp4
+
