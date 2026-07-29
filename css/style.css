@@ -799,7 +799,7 @@ img {
 }
 
 .service-card:nth-child(3) .service-img-wrapper {
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 248, 242, 0.5)), url('../assets/IMG_1096.JPG.jpeg');
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 248, 242, 0.5)), url('../assets/IMG_4119.JPG.jpeg');
     background-size: cover;
     background-position: center;
 }
