@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             splash.classList.add('hidden');
             document.body.classList.remove('no-scroll');
         }
-    }, 2000);
+    }, 400);
 });
 
 // ================= TESTIMONIAL GLOBAL FUNCTIONS =================
