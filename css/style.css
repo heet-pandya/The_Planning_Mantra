@@ -793,7 +793,7 @@ img {
 }
 
 .service-card:nth-child(2) .service-img-wrapper {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.05)), url('../assets/IMG_0541.JPEG');
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.05)), url('../assets/Planning Mantra -218.jpg.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -874,7 +874,7 @@ img {
 }
 
 .portfolio-item:nth-child(2) {
-    background: url('../assets/IMG_4104.JPG.jpeg') center/cover;
+    background: url('../assets/gallery-img-7.jpg') center/cover;
 }
 
 .portfolio-item:nth-child(3) {
@@ -882,7 +882,7 @@ img {
 }
 
 .portfolio-item:nth-child(4) {
-    background: url('../assets/IMG_4105.PNG') center/cover;
+    background: url('../assets/gallery-img-9.jpg') center/cover;
 }
 
 .portfolio-item:nth-child(5) {
