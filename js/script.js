@@ -2,6 +2,17 @@
  * The Planning Mantra - Interactive logic
  */
 
+// Splash Screen Logic
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        const splash = document.getElementById('splash-screen');
+        if (splash) {
+            splash.classList.add('hidden');
+            document.body.classList.remove('no-scroll');
+        }
+    }, 2000);
+});
+
 // ================= TESTIMONIAL GLOBAL FUNCTIONS =================
 let currentIndex = 0;
 
@@ -126,4 +137,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fadeElements.forEach(el => observer.observe(el));
 
+    // Team Stack Click & Auto Shuffle Logic
+    const teamStack = document.getElementById('teamStack');
+    if (teamStack) {
+        let shuffleInterval;
+
+        const shuffleStack = () => {
+            const topImage = teamStack.lastElementChild;
+            if (topImage) {
+                // Apply a quick transition effect
+                topImage.style.transform = 'translateX(120%) rotate(15deg)';
+                topImage.style.opacity = '0';
+                
+                setTimeout(() => {
+                    teamStack.insertBefore(topImage, teamStack.firstElementChild);
+                    // Reset inline styles so CSS takes over the new positions
+                    topImage.style.transform = '';
+                    topImage.style.opacity = '1';
+                }, 300);
+            }
+        };
+
+        const startShuffleInterval = () => {
+            clearInterval(shuffleInterval);
+            shuffleInterval = setInterval(shuffleStack, 1800);
+        };
+
+        teamStack.addEventListener('click', () => {
+            shuffleStack();
+            startShuffleInterval(); // Reset interval on manual tap
+        });
+
+        // Start auto-shuffle initially
+        startShuffleInterval();
+    }
+
+    // Video Autoplay on Scroll Logic
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                // Play video when it enters the viewport
+                video.play().catch(error => {
+                    console.log("Autoplay was prevented:", error);
+                });
+            } else {
+                // Pause video when it leaves the viewport
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.3 // Play when 30% of the video is visible
+    });
+
+    document.querySelectorAll('.video-item video').forEach(video => {
+        videoObserver.observe(video);
+    });
+
+    // Initialize Lucide Icons
+    lucide.createIcons();
 });

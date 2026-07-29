@@ -2,6 +2,9 @@
 node_modules/
 .DS_Store
 *.log
-assets/gallery-vid-2.mp4
-assets/gallery-vid-3.mp4
-
+*.mp4
+*.HEIC
+assets/*.mp4
+assets/*.HEIC
+assets/*.JPEG
+assets/*.jpeg

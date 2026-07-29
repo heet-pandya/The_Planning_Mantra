@@ -65,6 +65,42 @@ body {
     overflow-x: hidden;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Splash Screen */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+.splash-logo {
+    width: 250px;
+    height: auto;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
 h1,
 h2,
 h3,
@@ -114,6 +150,10 @@ img {
 
 .mt-5 {
     margin-top: 3rem;
+}
+
+.section-pad {
+    padding: 100px 0;
 }
 
 .relative {
@@ -340,8 +380,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 140px;
     /* Space for nav */
+    padding-bottom: 60px;
     overflow: hidden;
 }
 
@@ -563,10 +604,124 @@ img {
 }
 
 /*==========================================================================
+   About Us Section
+  ========================================================================== */
+.about {
+    background-color: var(--color-bg-darker);
+    position: relative;
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+@media (min-width: 768px) {
+    .about-card {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .about-card.about-reverse {
+        flex-direction: row;
+    }
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(161, 18, 18, 0.1);
+}
+
+.about-img-placeholder {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(161, 18, 18, 0.1));
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 15px;
+}
+
+@media (min-width: 768px) {
+    .about-img-placeholder {
+        flex: 1;
+        min-height: auto;
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+.placeholder-text {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about-content {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex: 1.5;
+    }
+}
+
+.about-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent-dark-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-role {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.about-content p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+#img-about-vyomika {
+    background: url('../assets/IMG_9928.jpg') center/cover;
+}
+
+#img-about-vyomika .placeholder-text {
+    display: none;
+}
+
+#img-about-harshita {
+    background: url('../assets/IMG_8442.jpg') center/cover;
+}
+
+#img-about-harshita .placeholder-text {
+    display: none;
+}
+
+/*==========================================================================
    Services Section
   ========================================================================== */
 .services {
-    padding: 100px 0;
     background-color: var(--color-bg-light);
     position: relative;
 }
@@ -638,19 +793,13 @@ img {
 }
 
 .service-card:nth-child(2) .service-img-wrapper {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.05)), url('../assets/corporate-events-500x500.webp');
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.05)), url('../assets/IMG_0541.JPEG');
     background-size: cover;
     background-position: center;
 }
 
 .service-card:nth-child(3) .service-img-wrapper {
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 248, 242, 0.5)), url('../assets/6e8576dee81932a559b3be489eb3fdf2.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.service-card:nth-child(4) .service-img-wrapper {
-    background: linear-gradient(135deg, rgba(161, 18, 18, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/gallery-img-5.jpg');
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 248, 242, 0.5)), url('../assets/IMG_1096.JPG.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -729,7 +878,7 @@ img {
 }
 
 .portfolio-item:nth-child(3) {
-    background: url('../assets/gallery-img-8.jpg') center/cover;
+    background: url('../assets/kamero-2k-KRIS4743.jpg.jpeg') center/cover;
 }
 
 .portfolio-item:nth-child(4) {
@@ -742,7 +891,11 @@ img {
 }
 
 .portfolio-item:nth-child(6) {
-    background: url('../assets/gallery-img-10.jpg') center/cover;
+    background: url('../assets/kamero-2k-KRIS4993.jpg.jpeg') center/cover;
+}
+
+.portfolio-item:nth-child(7) {
+    background: url('../assets/0E7A0990-104.jpg.jpeg') center/cover;
 }
 
 .portfolio-video-bg {
@@ -1282,4 +1435,132 @@ footer p {
     .section-title h2 {
         font-size: 2.2rem;
     }
+
+    .team-stack {
+        max-width: 90%;
+    }
+
+    .badge-top-right {
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: max-content;
+    }
+
+    .badge-bottom-left {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: max-content;
+    }
+}
+
+/*==========================================================================
+   New Sections: Experience & Videos
+  ========================================================================== */
+.experience {
+    background-color: var(--color-bg-light);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.experience-item {
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(161, 18, 18, 0.1);
+}
+
+.experience-item .icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.experience-item .icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--color-gold);
+    stroke-width: 1.5;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+.videos {
+    background-color: var(--color-bg-darker);
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+    align-items: start;
+}
+
+.video-item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    line-height: 0;
+}
+
+.video-item video {
+    display: block;
+    width: 100%;
+}
+
+/*==========================================================================
+   Team Stack (Hero)
+  ========================================================================== */
+.team-stack {
+    position: relative;
+    width: 400px;
+    aspect-ratio: 4/3;
+    z-index: 3;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.team-stack .stack-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.team-stack .stack-img:nth-child(1) {
+    transform: rotate(-6deg) translateX(-15px) translateY(10px);
+    z-index: 1;
+}
+
+.team-stack .stack-img:nth-child(2) {
+    transform: rotate(2deg) translateX(0px) translateY(-5px);
+    z-index: 2;
+}
+
+.team-stack .stack-img:nth-child(3) {
+    transform: rotate(8deg) translateX(15px) translateY(-15px);
+    z-index: 3;
 }

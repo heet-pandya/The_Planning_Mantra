@@ -21,18 +21,25 @@
         rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
+<body class="no-scroll">
+
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <img src="assets/WhatsApp_Image_2026-04-28_at_20.26.40-removebg-preview.png" alt="The Planning Mantra Logo" class="splash-logo">
+    </div>
 
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-content">
             <div class="logo">
-                <img src="assets/WhatsApp_Image_2026-04-28_at_20.26.40-removebg-preview.png" alt="The Planning Mantra Logo">
+                <a href="#home"><img src="assets/WhatsApp_Image_2026-04-28_at_20.26.40-removebg-preview.png" alt="The Planning Mantra Logo"></a>
             </div>
             <nav class="nav-links">
-                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
                 <a href="#services">Services</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#testimonials">Testimonials</a>
@@ -52,12 +59,11 @@
         <div class="hero-bg" id="hero-background"></div>
         <div class="container hero-content">
             <div class="glass-card main-hero-card">
-                <h1>Crafting <span class="text-accent">Timeless</span> Memories</h1>
-                <p>Welcome to The Planning Mantra. We specialize in curating highly premium, elegant, and unforgettable
-                    luxury events tailored to your unique story.</p>
+                <h1>Giving <span class="text-accent">Mantra</span> To Your Dreams</h1>
+                <p>At the planning mantra our goal is to blend innovation and creativity to design events that stand out. We bring your vision to life with seamless planning, thoughtful execution, and a trusted team that makes every celebration feel effortless.</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary glow-effect">Discover Our Services</a>
-                    <a href="#portfolio" class="btn btn-glass">View Portfolio</a>
+                    <a href="#services" class="btn btn-primary glow-effect">Our expertise</a>
+                    <a href="#portfolio" class="btn btn-glass">See our craft</a>
                 </div>
             </div>
 
@@ -67,18 +73,53 @@
                     <div class="glass-layer layer-1"></div>
                     <div class="glass-layer layer-2"></div>
 
-                    <div class="main-logo-card">
-                        <img src="assets/WhatsApp_Image_2026-04-28_at_20.26.40-removebg-preview.png" alt="The Planning Mantra Logo">
+                    <div class="team-stack" id="teamStack">
+                        <img src="assets/IMG_9850.jpg" alt="Team 3" class="stack-img">
+                        <img src="assets/IMG_1096.JPG.jpeg" alt="Team 2" class="stack-img">
+                        <img src="assets/IMG_0541.JPEG" alt="Team 1" class="stack-img">
                     </div>
 
                     <div class="floating-badge badge-top-right glass-card">
-                        <span class="badge-number">100</span>
-                        <span class="badge-text">EVENTS CRAFTED</span>
+                        <span class="badge-text" style="font-size: 1.1rem; font-weight: 600;">Destination Weddings</span>
                     </div>
 
                     <div class="floating-badge badge-bottom-left glass-card">
-                        <span class="badge-number">100%</span>
-                        <span class="badge-text">HAPPY CLIENTS</span>
+                        <span class="badge-text" style="font-size: 1.1rem; font-weight: 600;">Unique Experiences</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about section-pad">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>About Us</h2>
+            </div>
+            
+            <div class="about-grid">
+                <!-- Vyomika Vyas -->
+                <div class="about-card glass-card">
+                    <div class="about-img-placeholder" id="img-about-vyomika">
+                        <span class="placeholder-text">Image placeholder for Vyomika</span>
+                    </div>
+                    <div class="about-content">
+                        <h3>Vyomika Vyas</h3>
+                        <span class="about-role text-accent">Co - Founder, Creative Director</span>
+                        <p>With over 5 + years of experience, I bring a unique blend of creativity and expertise to every event I undertake. Creativity is my superpower, and I thrive on bringing innovative, new-age ideas to life, ensuring that each event stands out and becomes an unforgettable experience for all involved.</p>
+                    </div>
+                </div>
+
+                <!-- Harshita Maurya -->
+                <div class="about-card glass-card about-reverse">
+                    <div class="about-content">
+                        <h3>Harshita Maurya</h3>
+                        <span class="about-role text-accent">Co - Founder, Business Director</span>
+                        <p>With a prestigious Masters degree from National Academy Of Event Management &amp; Development (NAEMD) and an experience of over 5 + years in the industry, I specialize in negotiation tactics, ensuring you get the best value for your money without compromising on quality. My extensive knowledge spans across every department, guaranteeing that every detail of your dream wedding is meticulously planned and executed to perfection.</p>
+                    </div>
+                    <div class="about-img-placeholder" id="img-about-harshita">
+                        <span class="placeholder-text">Image placeholder for Harshita</span>
                     </div>
                 </div>
             </div>
@@ -86,21 +127,21 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services section-pad">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Our Premium Services</h2>
+                <h2>What we specialise in</h2>
                 <p>Every detail meticulously planned, every moment perfectly executed.</p>
             </div>
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="service-card glass-card">
                     <div class="service-img-wrapper">
-                        <img src="" alt="Luxury Weddings" id="img-service-wedding">
+                        <img src="assets/IMG_9850.jpg" alt="Destination Weddings" id="img-service-wedding">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-info">
-                        <h3>Luxury Weddings</h3>
+                        <h3>Destination Weddings</h3>
                         <p>From intimate ceremonies to grand celebrations, our wedding planning brings your dream to
                             life with elegant precision.</p>
                         <a href="#contact" class="link-arrow">Learn More &#8594;</a>
@@ -109,33 +150,7 @@
                 <!-- Service 2 -->
                 <div class="service-card glass-card">
                     <div class="service-img-wrapper">
-                        <img src="" alt="Corporate Events" id="img-service-corp">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="service-info">
-                        <h3>Corporate Galas</h3>
-                        <p>Sophisticated and impactful corporate events designed to impress stakeholders and celebrate
-                            milestones.</p>
-                        <a href="#contact" class="link-arrow">Learn More &#8594;</a>
-                    </div>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card glass-card">
-                    <div class="service-img-wrapper">
-                        <img src="" alt="Baby Showers" id="img-service-baby">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="service-info">
-                        <h3>Baby Showers</h3>
-                        <p>Bespoke concept-driven baby showers that blend beautiful aesthetics with heartfelt intimacy.
-                        </p>
-                        <a href="#contact" class="link-arrow">Learn More &#8594;</a>
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="service-card glass-card">
-                    <div class="service-img-wrapper">
-                        <img src="" alt="Social Events" id="img-service-social">
+                        <img src="assets/IMG_0541.JPEG" alt="Social Events" id="img-service-social">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-info">
@@ -145,18 +160,56 @@
                         <a href="#contact" class="link-arrow">Learn More &#8594;</a>
                     </div>
                 </div>
+                <!-- Service 3 -->
+                <div class="service-card glass-card">
+                    <div class="service-img-wrapper">
+                        <img src="assets/IMG_1096.JPG.jpeg" alt="Corporate Events" id="img-service-corp">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Corporate Events</h3>
+                        <p>Sophisticated and impactful corporate events designed to impress stakeholders and celebrate
+                            milestones.</p>
+                        <a href="#contact" class="link-arrow">Learn More &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Planning Mantra Experience Section -->
+    <section id="experience" class="experience section-pad">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>The Planning Mantra Experience</h2>
+                <p>From selecting the perfect destination to wrapping up the final settlement, our team manages every detail so you can simply enjoy the journey.</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="map-pin"></i></div><p>Destination & Venue Selection</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="mail"></i></div><p>Guest RSVP & Hospitality</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="sparkles"></i></div><p>Decor & Design Management</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="utensils-crossed"></i></div><p>Food & beverage supervision</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="mic"></i></div><p>Artist Management</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="truck"></i></div><p>Logistics Management</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="smartphone"></i></div><p>Social Media Management</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="music"></i></div><p>Entertainment Planning</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="clapperboard"></i></div><p>Showrunning</p></div>
+                <div class="experience-item glass-card"><div class="icon"><i data-lucide="briefcase"></i></div><p>Post wedding Settlements</p></div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio section-pad">
         <div class="container">
             <div class="section-title text-center">
-                <h2>A Glimpse of Magic</h2>
-                <p>Explore some of our most stunning and visually captivating events.</p>
+                <h2>Stories We Brought To Life</h2>
+                <p>Here's a glimpse into the weddings and events we've had the privilege of bringing to life.</p>
             </div>
             <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-glass"></div>
+                </div>
                 <div class="portfolio-item">
                     <div class="portfolio-glass"></div>
                 </div>
@@ -182,12 +235,35 @@
         </div>
     </section>
 
+    <!-- Videos Section -->
+    <section id="videos" class="videos section-pad">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Celebrations in Motion</h2>
+            </div>
+            <div class="videos-grid">
+                <div class="video-item glass-card">
+                    <video controls muted loop playsinline>
+                        <source src="assets/New -01 Mumbai -Wedding Teaser (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item glass-card">
+                    <video controls muted loop playsinline>
+                        <source src="assets/VARMALA GLIMPSE 2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section-pad">
 
         <div class="section-title text-center">
-            <span class="section-eyebrow">Client Stories</span>
-            <h2>Words That<br><em>Warm Our Hearts</em></h2>
+            <span class="section-eyebrow">Testimonials</span>
+            <h2>What our<br><em>clients say</em></h2>
         </div>
 
         <div class="testimonials-wrapper">
@@ -198,16 +274,14 @@
                 <div class="testimonial-slide">
                     <div class="glass-card testimonial-card">
                         <span class="testimonial-quote">"</span>
-                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
                         <p class="testimonial-text">
-                            The Planning Mantra transformed our wedding into a dream.
-                            Every detail felt luxurious and deeply personal.
+                            They handled our anniversary event wonderfully. Everything was coordinated with grace and perfection. Aapko aankh band karke apna event enjoy karna hai baaki entire back end work is theirs, sabne itni taareef ki hamara toh paisa vasool ho gaya, it is value for money, go for The Planning Mantra!
                         </p>
                         <div class="testimonial-author">
                             <div class="author-avatar">RS</div>
                             <div>
-                                <div class="author-name">Rahul & Simran</div>
-                                <div class="author-role">Wedding · Mumbai</div>
+                                <div class="author-name">Rakesh & Ritu Saraf</div>
+                                <div class="author-role">25th Anniversary Event · Mumbai</div>
                             </div>
                         </div>
                     </div>
@@ -217,16 +291,14 @@
                 <div class="testimonial-slide">
                     <div class="glass-card testimonial-card">
                         <span class="testimonial-quote">"</span>
-                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
                         <p class="testimonial-text">
-                            The execution was flawless. Our corporate event looked
-                            world-class and premium.
+                            I’m blessed to have found you two! Y’all stayed optimistic and were pushing straight through every storm, none of this would have been remotely possible without all the love and labour you all poured into it. We have now become a greater family and i hope everyone understands how important your roles are in wedding planning.
                         </p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">AM</div>
+                            <div class="author-avatar">MM</div>
                             <div>
-                                <div class="author-name">Arjun Mehta</div>
-                                <div class="author-role">Corporate · Delhi</div>
+                                <div class="author-name">Maithilee & Mahesh</div>
+                                <div class="author-role">Wedding Event · Mumbai</div>
                             </div>
                         </div>
                     </div>
@@ -236,16 +308,65 @@
                 <div class="testimonial-slide">
                     <div class="glass-card testimonial-card">
                         <span class="testimonial-quote">"</span>
-                        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
                         <p class="testimonial-text">
-                            My baby shower felt magical. Every detail was crafted
-                            beautifully.
+                            A lot of people came up to me and told me how much they liked TPM’s work, you guys executed everything really well and we all are truly happy with the work. You guys and your team is great and i know you will do wonders in future.
                         </p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">PD</div>
+                            <div class="author-avatar">HH</div>
                             <div>
-                                <div class="author-name">Priya Desai</div>
-                                <div class="author-role">Baby Shower · Pune</div>
+                                <div class="author-name">Harshita & Harshvardhan</div>
+                                <div class="author-role">Wedding Event · Mumbai</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="testimonial-slide">
+                    <div class="glass-card testimonial-card">
+                        <span class="testimonial-quote">"</span>
+                        <p class="testimonial-text">
+                            I’m overwhelmed with gratitude for your presence at the event, seeing your smiling faces, sharing laughter, and reliving cherished memories made our house feel warmer and like home. Keep shining, keep flying.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PM</div>
+                            <div>
+                                <div class="author-name">Punit Mehrotra</div>
+                                <div class="author-role">Housewarming Event · Mumbai</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="testimonial-slide">
+                    <div class="glass-card testimonial-card">
+                        <span class="testimonial-quote">"</span>
+                        <p class="testimonial-text">
+                            Itni taareef karungi ki woh apne baccho ki shaadi mein bhi aapko hi bulayenge.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DL</div>
+                            <div>
+                                <div class="author-name">Divya Lodha</div>
+                                <div class="author-role">Housewarming Event · Mumbai</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="testimonial-slide">
+                    <div class="glass-card testimonial-card">
+                        <span class="testimonial-quote">"</span>
+                        <p class="testimonial-text">
+                            Loved the way you guys handled the entire event, Just wanted to thank you guys for being incredibly amazing, from the decor to sourcing to making my life easy Thank You.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">KG</div>
+                            <div>
+                                <div class="author-name">Komal Ganjawala</div>
+                                <div class="author-role">Birthday Event · Mumbai</div>
                             </div>
                         </div>
                     </div>
@@ -259,6 +380,9 @@
                 <div class="t-dot active" onclick="goToTestimonial(0)"></div>
                 <div class="t-dot" onclick="goToTestimonial(1)"></div>
                 <div class="t-dot" onclick="goToTestimonial(2)"></div>
+                <div class="t-dot" onclick="goToTestimonial(3)"></div>
+                <div class="t-dot" onclick="goToTestimonial(4)"></div>
+                <div class="t-dot" onclick="goToTestimonial(5)"></div>
                 <div class="t-arrow" onclick="nextTestimonial()">→</div>
             </div>
 
@@ -272,7 +396,7 @@
 
         <div class="section-title text-center mb-5">
             <span class="section-eyebrow">Get In Touch</span>
-            <h2>Let's Create<br><em>Something Extraordinary</em></h2>
+            <h2>Let's Give Mantra<br><em>To Your Dreams</em></h2>
         </div>
 
         <div class="contact-grid">
@@ -280,7 +404,7 @@
             <!-- LEFT SIDE -->
             <div class="contact-info">
 
-                <h3>Begin Your<br><em>Dream Event</em></h3>
+                <h3>Let's begin<br><em>your story</em></h3>
 
                 <p>
                     Share your vision with us. Our team will connect within 24 hours
