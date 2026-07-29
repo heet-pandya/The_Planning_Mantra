@@ -1329,6 +1329,14 @@ footer p {
     text-align: center;
 }
 
+.footer-credit {
+    font-size: 12px !important;
+    color: #888 !important;
+    opacity: 0.5;
+    margin-top: 6px !important;
+    letter-spacing: 0.5px;
+}
+
 /*==========================================================================
    Animations
   ========================================================================== */
